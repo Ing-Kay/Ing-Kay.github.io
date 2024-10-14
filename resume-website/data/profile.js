@@ -83,7 +83,7 @@ const profileData = {
       ],
     },
     {
-      organization: "Geo-tech Solutions",
+      organization: "Geotech Solutions",
       title: `Linux Administrator`,
       date: "2016 - 2018",
       details: [
