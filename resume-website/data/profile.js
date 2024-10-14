@@ -74,7 +74,7 @@ const profileData = {
       ],
     },
     {
-      organization: "Parbtech Inc.",
+      organization: "Parbtech Solutions",
       title: `Cloud Engineer`,
       date: "2018 -2020",
       details: [
@@ -85,7 +85,7 @@ const profileData = {
     {
       organization: "Geo-tech Solutions",
       title: `Linux Administrator`,
-      date: "2016 - 2028",
+      date: "2016 - 2018",
       details: [
         `Created feature-specific modules within the internal CRM to enhance team operations. Utilized <strong>ReactJS</strong> with <strong>SCSS</strong> and <strong>Redux</strong> for frontend development, alongside <strong>NodeJS-Express</strong> with protobuf for backend functionality.`,
         `Developed a tailored <strong>Content Management System (CMS) for MPL's website</strong>, enabling seamless content and image updates across various pages in real-time.`,
