@@ -1,10 +1,10 @@
 const profileData = {
   title: "Resume",
   name: "George Tawiah",
-  sub_title: "System Administrator, and DevOps Engineer",
+  sub_title: "DevOps Engineer",
   logoURL: "assets/images/dp.jpg",
   about: {
-    intro: `Junior Software Engineer with 1 years of FullStack development experience. Expert in building high-performance UI and seamless UX. Experienced in leading projects, migrating legacy systems, and creating reusable components. Skilled in A/B testing, cross-platform compatibility, and responsive design. Effective communicator and collaborator dedicated to continuous learning and innovation..`,
+    intro: `Welcome to my website. I'm an accomplished and result-oriented professional with 5+ years of experience in the IT Industry. A DevOps Engineer with hands-on experience supporting, automating, and optimising deployments in cloud infrastructure. Building, deploying, source code management, leveraging configuration management, CI/CD, and DevOps processes.`,
     contact: {
       email: "george.tawiah@ahoo.com",
       phone: "+233 541733989",
