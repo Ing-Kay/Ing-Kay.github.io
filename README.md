@@ -1,4 +1,4 @@
-# KayKloud24.github.io
+# Ing-Kay.github.io 
 
 Welcome to the repository for **KayKloud24.github.io**! This project is a personal or portfolio website hosted on GitHub Pages. It serves as a showcase of my work, skills, and projects.
 
@@ -34,7 +34,7 @@ To run this project locally, follow these steps:
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/Ing-Kay/KayKloud24.github.io.git
+   git clone https://github.com/Ing-Kay/Ing-Kay.github.io.git
    ```
 2. **Navigate to the project directory**:
    ```bash
@@ -45,7 +45,7 @@ To run this project locally, follow these steps:
    - Alternatively, use a local server (e.g., `Live Server` in VS Code) for a better development experience.
 
 ## Usage
-- Visit the live site at [https://Ing-Kay.github.io/KayKloud24.github.io](https://Ing-Kay.github.io/KayKloud24.github.io).
+- Visit the live site at [https://Ing-Kay.github.io/Ing-Kay.github.io](https://Ing-Kay.github.io/Ing-Kay.github.io).
 - Explore the different sections of the website to learn more about my work and projects.
 - Use the contact form to get in touch with me.
 
@@ -63,7 +63,7 @@ Please ensure your code follows best practices and includes appropriate document
 If you have any questions or suggestions, feel free to reach out:
 - **Name**: Ing-Kay
 - **GitHub**: [Ing-Kay](https://github.com/Ing-Kay)
-- **Website**: [KayKloud24.github.io](https://Ing-Kay.github.io/KayKloud24.github.io)
+- **Website**: [Ing-Kay.github.io](https://Ing-Kay.github.io/Ing-Kay.github.io)
 
 ---
 
