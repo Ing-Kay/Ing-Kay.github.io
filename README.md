@@ -38,7 +38,7 @@ To run this project locally, follow these steps:
    ```
 2. **Navigate to the project directory**:
    ```bash
-   cd KayKloud24.github.io
+   cd Ing-Kay.github.io
    ```
 3. **Open the project**:
    - Open the `index.html` file in your preferred browser.
