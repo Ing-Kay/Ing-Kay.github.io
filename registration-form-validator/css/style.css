@@ -443,8 +443,23 @@ input[type="reset"]:hover {
   input[type="password"],
   input[type="tel"],
   input[type="date"],
+  input[type="number"],
+  input[type="address"],
   textarea,
   select {
     font-size: 16px !important;
   }
+
+  .error-message {
+    color: red;
+    font-size: 0.9em;
+    margin-top: 5px;
+  }
+
+  .success-message {
+    color: green;
+    font-size: 0.9em;
+    margin-top: 5px;
+  }
+
 } 
