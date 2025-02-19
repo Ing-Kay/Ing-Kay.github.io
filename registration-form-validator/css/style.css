@@ -1,0 +1,450 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+/* Variables */
+:root {
+  --primary-bg-color: #2e8b57;
+  --secondary-bg-color: #3aa76d;
+  --primary-text-color: #f5f5f5;
+  --padding: 2rem;
+  --padding-mediaquery: 0.5rem;
+  --shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Reset CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+
+body {
+  min-height: 100vh;
+  background-image: url('../img/bg.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: var(--primary-text-color);
+}
+
+main.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: var(--padding);
+}
+
+.formContent {
+  width: 100%;
+  max-width: 500px;
+  margin: 1rem auto;
+  height: auto;
+  max-height: 100vh;
+  /* overflow-y: auto; */
+}
+
+.form {
+  background: rgba(29, 28, 28, 0.8);
+  backdrop-filter: blur(10px);
+  padding: var(--padding);
+  border-radius: 10px;
+  box-shadow: var(--shadow);
+}
+
+.formTitle {
+  font-size: clamp(1.2rem, 4vw, 1.5rem);
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: var(--primary-text-color);
+  position: relative;
+  width: 100%;
+}
+
+
+.formTitle::after {
+  content: '';
+  background: linear-gradient(160deg, #00e975 0%, #80D0C7 100%);
+  height: 3px;
+  width: 100%;
+  border-radius: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transition: 100ms ease-in-out;
+}
+
+.formTitle:hover::after {
+  width: 0;
+}
+
+fieldset {
+  border: 1px solid var(--primary-bg-color);
+  border-radius: 5px;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+legend {
+  color: var(--secondary-bg-color);
+  padding: var(--padding-mediaquery);
+}
+
+.formField {
+  margin-bottom: 1rem;
+}
+
+.formField label {
+  display: block;
+  margin-bottom: .5rem;
+  color: var(--primary-text-color);
+}
+
+.inputWrapper {
+  position: relative;
+  display: block;
+}
+
+.inputWrapper i {
+  position: absolute;
+  right: .75rem;
+  top: 50%;
+  /* right: 20px; */
+  transform: translateY(-50%);
+  color: var(--primary-bg-color);
+  pointer-events: none;
+}
+
+/* Input Styles */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="tel"],
+input[type="date"],
+textarea,
+select {
+  width: 100%;
+  padding: .75rem;
+  padding-left: 2.5rem;
+  border: 1px solid var(--primary-bg-color);
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--primary-text-color);
+}
+
+/* For Firefox */
+input[type="date"]::-moz-calendar-picker-indicator {
+  filter: invert(54%) sepia(51%) saturate(458%) hue-rotate(108deg) brightness(95%) contrast(87%);
+  cursor: pointer;
+}
+
+/* Date input calendar icon styling */
+input[type="date"]::-webkit-calendar-picker-indicator {
+  filter: invert(54%) sepia(51%) saturate(458%) hue-rotate(108deg) brightness(95%) contrast(87%);
+  cursor: pointer;
+  opacity: 0.8;
+  padding-right: 4px;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator:hover {
+  opacity: 1;
+}
+
+/* Radio Button Group styles */
+.radioGroup label {
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.radioGroup input[type="radio"] {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 1.2rem;
+  height: 1.2rem;
+  border: 2px solid var(--primary-bg-color);
+  border-radius: 50%;
+  margin-right: .5rem;
+  display: grid;
+  place-content: center;
+  cursor: pointer;
+}
+
+.radioGroup input[type="radio"]::before {
+  content: "";
+  width: .65rem;
+  height: .65rem;
+  border-radius: 50%;
+  transform: scale(0);
+  transition: 120ms transform ease-in-out;
+  background-color: var(--primary-bg-color);
+}
+
+.radioGroup input[type="radio"]:checked::before{
+  transform: scale(1);
+}
+
+.radioGroup input[type="radio"]:focus {
+  outline: max(2px, .15em) solid rgba(46, 139, 87, 0.3);
+  outline-offset: max(2px, .15em);
+}
+
+/* Address textarea */
+textarea {
+  min-height: 100px;
+  resize: vertical;
+  margin-top: .5rem;
+}
+
+/* Membership Select */
+.dropdownLabel {
+  display: block;
+  margin-bottom: .5rem;
+  color: var(--primary-text-color);
+}
+
+.dropdown {
+  background-color: rgba(255, 255, 255, 0.1);
+  cursor: pointer;
+  margin-bottom: 1rem;
+}
+
+.dropdown .membership {
+  background-color: #49524d;
+}
+
+/* Newsletter checkbox */
+.checkboxField {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  margin: 1rem 0;
+  position: relative;
+}
+
+.checkboxField label {
+  margin: 0;
+  cursor: pointer;
+}
+
+.checkboxField input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 1.2rem;
+  height: 1.2rem;
+  border: 2px solid var(--primary-bg-color);
+  border-radius: 5px;
+  display: grid;
+  place-content: center;
+  cursor: pointer;
+  margin: 0;
+  position: relative;
+}
+
+.checkboxField input[type="checkbox"]::before {
+  content: "";
+  width: .65em;
+  height: .65em;
+  transform: scale(0);
+  transition: 120ms transform ease-in-out;
+  box-shadow: inset 1rem 1rem var(--primary-bg-color);
+  transform-origin: center;
+  clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+} 
+
+.checkboxField input[type="checkbox"]:checked::before {
+  transform: scale(1);
+}
+
+.checkboxField input[type="checkbox"]:hover {
+  border-color: --secondary-bg-color;
+}
+
+.checkboxField input[type="checkbox"]:focus {
+    outline: max(2px, .15em) solid rgba(46, 139, 87, 0.3);
+    outline-offset: 2px;
+}
+
+/* Placeholder color */
+::placeholder {
+  color: rgba(245, 245, 245, 0.7);
+}
+
+/* Focus states */
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  border-color: --secondary-bg-color;
+  box-shadow: 0 0 5px rgba(46, 139, 87, 0.5);
+}
+
+/* Button group */
+.buttonGroup {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+input[type="submit"],
+input[type="reset"] {
+  flex: 1;
+  padding: .75rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all .3s ease;
+}
+
+input[type="submit"] {
+  background: var(--primary-bg-color);
+  color: var(--primary-text-color);
+}
+
+input[type="reset"] {
+  background: var(--primary-text-color);
+  color: #1d1c1c;
+}
+
+input[type="submit"]:hover,
+input[type="reset"]:hover {
+  opacity: .9;
+  transform: translateY(-2px);
+}
+
+/* Responsive  Design */
+@media (max-width: 768px) {
+  :root {
+    --padding: 1rem;
+  }
+
+  main.container {
+    /* flex-direction: column; */
+    padding: var(--padding-mediaquery);
+  }
+
+  .form {
+    padding: 1rem;
+  }
+
+  fieldset {
+    padding: .75rem;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="password"],
+  input[type="tel"],
+  input[type="date"],
+  textarea,
+  select {
+    padding: var(--padding-mediaquery);
+    padding-right: 2rem;
+    font-size: 16px;
+  }
+
+  .radioGroup {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  input[type="date"] {
+    min-height: 100%;
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .form {
+    padding: .75rem;
+  }
+
+  fieldset {
+    padding: var(--padding-mediaquery);
+  }
+
+  .formTitle {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+  }
+
+  .formField {
+    margin-bottom: .75rem;
+  }
+
+  .buttonGroup {
+    flex-direction: column;
+    gap: .5rem;
+  }
+}
+
+/* iPhone specific fixes */
+@supports (-webkit-touch-callout: none) {
+  input[type="date"] {
+    min-height: 2.5rem;
+    appearance: none;
+    -webkit-appearance: none;
+    display: block;
+    position: relative;
+    padding: 0.75rem;
+    width: 100%;
+    box-sizing: border-box;
+    background: rgba(255, 255, 255, 0.1);
+    /* Custom wrapper for date input */
+    .dateWrapper {
+      position:relative;
+      width: 100%;
+      display: block; 
+    }
+  
+    /* position the calendar icon */
+    .dateWrapper::after {
+      content: '';
+      position: absolute;
+      right: 0.75rem;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 20px;
+      height: 20px;
+      background: var(--primary-bg-color);
+      mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M19 4h-1V2h-2v2H8V2H6v2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V9h14v11z'/%3E%3C/svg%3E");
+      -webkit-mask-image:  url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M19 4h-1V2h-2v2H8V2H6v2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V9h14v11z'/%3E%3C/svg%3E");
+      mask-size: contain;
+      -webkit-mask-size: contain;
+      mask-repeat: no-repeat;
+      -webkit-mask-repeat: no-repeat;
+      pointer-events: none;
+    }
+  
+    input[type="date"]::-webkit-calendar-picker-indicator {
+      opacity: 0;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      cursor: pointer;
+    }
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="password"],
+  input[type="tel"],
+  input[type="date"],
+  textarea,
+  select {
+    font-size: 16px !important;
+  }
+} 

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="This is an HTML form for Jomacs IT and Solutions to handle member registration system.">
+  <meta name="author" content="Jones Osei">
+  <title>Jomacs Registration Form</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
+  <link rel="manifest" href="favicon_io/site.webmanifest">
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- Navigation Bar -->
+  <main class="container">
+    <section class="formContent">
+      <form class="form" action="https://httpbin.org/post" method="post">
+        <h1 class="formTitle">Jomacs Student Registration Form</h1>
+        <>
+          <legend>Personal Information</legend>
+          <p class="formField">
+            <label for="fname">Full Name</label>
+            <span class="inputWrapper">
+              <input type="text" id="fname" name="fname" placeholder="Full Name" autocomplete="name" required>
+              <i class="bx bxs-user"></i>
+            </span>
+          </p>
+           
+          <!--  Email  -->
+          <p class="formField">
+            <label for="email">Email</label>
+            <span class="inputWrapper">
+              <input type="email" id="email" name="email" placeholder="Email" autocomplete="email" required>
+              <i class="bx bxs-envelope"></i>
+            </span>
+          </p>
+
+          <!--  Password  -->
+          <p class="formField">
+            <label for="password">Password</label>
+            <span class="inputWrapper">
+              <input type="password" id="password" name="password" placeholder="Password" required>
+              <i class="bx bxs-lock-alt"></i>
+            </span>
+          </p>
+          
+          <!-- Phone Number -->
+          <p class="formField">
+            <label for="phone">Phone</label>
+            <span class="inputWrapper">
+              <input type="tel" id="phone" name="phone" placeholder="Phone" autocomplete="tel" required>
+              <i class="bx bxs-contact"></i>
+            </span>
+          </p>
+
+          <!-- Date of Birth -->
+          <p class="formField">
+            <label for="DOB">Date of Birth</label>
+            <span class="dateWrapper">
+              <input type="date" id="DOB" name="DOB" required>
+            </span>
+          </p>
+
+          <!-- For radio buttons -->
+          <p class="formField">
+            <label class="radioLabel">Gender</label>
+          <div class="radioGroup">
+            <label for="male">
+              <input type="radio" id="male" name="gender" value="male">
+              Male
+            </label>
+            <label for="female">
+              <input checked type="radio" id="female" name="gender" value="female">
+              Female
+            </label>
+            <label for="other">
+              <input type="radio" id="other" name="gender" value="other">
+              Other
+            </label>
+          </div>
+          </p>
+          <!-- for textarea -->
+          <p class="textareaField">
+            <!-- <label for="address">Address</label> -->
+            <textarea id="address" name="address" placeholder="Enter your address here" required></textarea>
+          </p>
+        </fieldset>
+
+        <!-- For dropdown -->
+        <label class="dropdownLabel" for="membership">Membership Type</label>
+        <select class="dropdown" id="membership" name="membership">
+          <option class="membership" value="regular">Regular</option>
+          <option class="membership" selected value="associate">Associate</option>
+          <option class="membership" value="visitor">Visitor</option>
+        </select>
+
+        <!-- For checkbox -->
+        <p class="checkboxField">
+          <label for="newsletter">Subscribe to our weekly newsletter</label>
+          <input checked type="checkbox" id="newsletter" name="newsletter">
+        </p>
+
+        <div class="buttonGroup">
+          <input type="submit" value="Submit">
+          <input type="reset" value="Reset">
+        </div>
+      </form>
+    </section>
+  </main>
+  <script src="validation.js"></script>
+</body>
+</html>
