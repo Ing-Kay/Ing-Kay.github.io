@@ -1,7 +1,3 @@
-Below is a sample `README.md` file for your project hosted at [https://github.com/Ing-Kay/KayKloud24.github.io.git](https://github.com/Ing-Kay/KayKloud24.github.io.git). You can customize it further based on the specifics of your project.
-
----
-
 # KayKloud24.github.io
 
 Welcome to the repository for **KayKloud24.github.io**! This project is a personal or portfolio website hosted on GitHub Pages. It serves as a showcase of my work, skills, and projects.
