@@ -4,9 +4,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description"
-    content="This is an HTML form for Jomacs IT and Solutions to handle member registration system.">
-  <meta name="author" content="Jones Osei">
+  <meta name="description" content="This is an HTML form for Jomacs IT and Solutions to handle member registration system.">
+  <meta name="author" content="George Kay">
   <title>Jomacs Registration Form</title>
   <link rel="stylesheet" href="css/style.css">
   <link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
@@ -18,37 +17,41 @@
 
 <body>
 
-  <!-- Navigation Bar -->
-  <main class="container">
+  <!-- Main container -->
+  <main class="container"></main>
+    <!-- Form section -->
     <section class="formContent">
       <form class="form" action="https://httpbin.org/post" method="post">
         <h1 class="formTitle">Jomacs Student Registration Form</h1>
         
-          <legend>Personal Information</legend>
-          
-          <p class="formField">
-            <label for="fname">Full Name</label>
-            <span class="inputWrapper">
-              <input type="text" id="fname" name="fname" placeholder="Full Name" autocomplete="name" required>
-              <i class="bx bxs-user"></i>
-            </span>
-          </p>
-           
-          <!--  Email  -->
-          <p class="formField">
-            <label for="email">Email</label>
-            <span class="inputWrapper">
-              <input type="email" id="email" name="email" placeholder="Email" autocomplete="email" required>
-              <i class="bx bxs-envelope"></i>
-            </span>
-          </p>
+        <!-- Personal Information section -->
+        <legend>Personal Information</legend>
+        
+        <!-- Full Name field -->
+        <p class="formField">
+          <label for="fname">Full Name</label>
+          <span class="inputWrapper">
+            <input type="text" id="fname" name="fname" placeholder="Full Name" autocomplete="name" required>
+            <i class="bx bxs-user"></i>
+          </span>
+        </p>
+        
+        <!-- Email field -->
+        <p class="formField">
+          <label for="email">Email</label>
+          <span class="inputWrapper">
+            <input type="email" id="email" name="email" placeholder="Email" autocomplete="email" required>
+            <i class="bx bxs-envelope"></i>
+          </span>
+        </p>
 
-          <!-- Country -->
-              <p class="formField"></p>
-              <label for="country">Country</label>
-              <span class="inputWrapper">
-                <select id="country" name="country" required style="background-color: #333; color: #fff;">
-                <option value="" disabled selected>Select your country</option>
+        <!-- Country field -->
+        <p class="formField">
+          <label for="country">Country</label>
+          <span class="inputWrapper">
+            <select id="country" name="country" required style="background-color: #333; color: #fff;">
+              <option value="" disabled selected>Select your country</option>
+              <!-- List of countries -->
               <option value="Algeria">Algeria</option>
               <option value="Angola">Angola</option>
               <option value="Benin">Benin</option>
@@ -105,127 +108,130 @@
               <option value="Zimbabwe">Zimbabwe</option>
             </select>
             <i class="bx bxs-globe"></i>
-            </span>
-          </p>
-    
-          <!-- City -->
-            <p class="formField"></p>
-            <label for="city">City</label>
-            <span class="inputWrapper">
-              <select id="city" name="city" required style="background-color: #333; color: #fff;">
-                <option value="" disabled selected>Select your city</option>
-              </select>
-              <i class="bx bxs-city"></i>
-            </span>
-            </p>
-            <script>
-            const countryCityMap = {
-              "Algeria": ["Algiers", "Oran", "Constantine"],
-              "Angola": ["Luanda", "N'dalatando", "Huambo"],
-              "Benin": ["Porto-Novo", "Cotonou", "Parakou"],
-              "Botswana": ["Gaborone", "Francistown", "Molepolole"],
-              "Burkina Faso": ["Ouagadougou", "Bobo-Dioulasso", "Koudougou"],
-              "Burundi": ["Gitega", "Bujumbura", "Ngozi"],
-              "Cabo Verde": ["Praia", "Mindelo", "Santa Maria"],
-              "Cameroon": ["Yaoundé", "Douala", "Garoua"],
-              "Central African Republic": ["Bangui", "Bimbo", "Berbérati"],
-              "Chad": ["N'Djamena", "Moundou", "Sarh"],
-              "Comoros": ["Moroni", "Mutsamudu", "Fomboni"],
-              "Congo, Democratic Republic of the": ["Kinshasa", "Lubumbashi", "Mbuji-Mayi"],
-              "Congo, Republic of the": ["Brazzaville", "Pointe-Noire", "Dolisie"],
-              "Djibouti": ["Djibouti", "Ali Sabieh", "Tadjourah"],
-              "Egypt": ["Cairo", "Alexandria", "Giza"],
-              "Equatorial Guinea": ["Malabo", "Bata", "Ebebiyin"],
-              "Eritrea": ["Asmara", "Keren", "Massawa"],
-              "Eswatini": ["Mbabane", "Manzini", "Big Bend"],
-              "Ethiopia": ["Addis Ababa", "Dire Dawa", "Mekelle"],
-              "Gabon": ["Libreville", "Port-Gentil", "Franceville"],
-              "Gambia": ["Banjul", "Serekunda", "Brikama"],
-              "Ghana": ["Accra", "Kumasi", "Tamale"],
-              "Guinea": ["Conakry", "Nzérékoré", "Kankan"],
-              "Guinea-Bissau": ["Bissau", "Bafatá", "Gabú"],
-              "Ivory Coast": ["Abidjan", "Yamoussoukro", "Bouaké"],
-              "Kenya": ["Nairobi", "Mombasa", "Kisumu"],
-              "Lesotho": ["Maseru", "Teyateyaneng", "Mafeteng"],
-              "Liberia": ["Monrovia", "Gbarnga", "Kakata"],
-              "Libya": ["Tripoli", "Benghazi", "Misrata"],
-              "Madagascar": ["Antananarivo", "Toamasina", "Antsirabe"],
-              "Malawi": ["Lilongwe", "Blantyre", "Mzuzu"],
-              "Mali": ["Bamako", "Sikasso", "Mopti"],
-              "Mauritania": ["Nouakchott", "Nouadhibou", "Rosso"],
-              "Mauritius": ["Port Louis", "Beau Bassin-Rose Hill", "Vacoas-Phoenix"],
-              "Morocco": ["Rabat", "Casablanca", "Marrakesh"],
-              "Mozambique": ["Maputo", "Matola", "Beira"],
-              "Namibia": ["Windhoek", "Rundu", "Walvis Bay"],
-              "Niger": ["Niamey", "Zinder", "Maradi"],
-              "Nigeria": ["Lagos", "Abuja", "Kano"],
-              "Rwanda": ["Kigali", "Butare", "Gitarama"],
-              "Sao Tome and Principe": ["São Tomé", "Santo António", "Neves"],
-              "Senegal": ["Dakar", "Touba", "Thiès"],
-              "Seychelles": ["Victoria", "Anse Boileau", "Bel Ombre"],
-              "Sierra Leone": ["Freetown", "Bo", "Kenema"],
-              "Somalia": ["Mogadishu", "Hargeisa", "Bosaso"],
-              "South Africa": ["Pretoria", "Cape Town", "Johannesburg"],
-              "South Sudan": ["Juba", "Malakal", "Wau"],
-              "Sudan": ["Khartoum", "Omdurman", "Port Sudan"],
-              "Tanzania": ["Dodoma", "Dar es Salaam", "Mwanza"],
-              "Togo": ["Lomé", "Sokodé", "Kara"],
-              "Tunisia": ["Tunis", "Sfax", "Sousse"],
-              "Uganda": ["Kampala", "Gulu", "Lira"],
-              "Zambia": ["Lusaka", "Kitwe", "Ndola"],
-              "Zimbabwe": ["Harare", "Bulawayo", "Chitungwiza"]
-            };
+          </span>
+        </p>
 
-            document.getElementById('country').addEventListener('change', function() {
-              const country = this.value;
-              const citySelect = document.getElementById('city');
-              citySelect.innerHTML = '<option value="" disabled selected>Select your city</option>';
+        <!-- City field -->
+        <p class="formField">
+          <label for="city">City</label>
+          <span class="inputWrapper">
+            <select id="city" name="city" required style="background-color: #333; color: #fff;">
+              <option value="" disabled selected>Select your city</option>
+            </select>
+            <i class="bx bxs-city"></i>
+          </span>
+        </p>
 
-              if (countryCityMap[country]) {
-                countryCityMap[country].forEach(city => {
-                  const option = document.createElement('option');
-                  option.value = city;
-                  option.textContent = city;
-                  citySelect.appendChild(option);
-                });
-              }
-            });
-            </script>
-         
-          <!--  Password  -->
-          <p class="formField">
-            <label for="password">Password</label>
-            <span class="inputWrapper">
-              <input type="password" id="password" name="password" placeholder="Password" required>
-              <i class="bx bxs-lock-alt"></i>
-            </span>
-          </p>
-          
-          <div class="password-strength">
-            <span id="strength-text">Password Strength: </span>
-            <span id="strength-bar"></span>
-          </div>
+        <!-- JavaScript to populate city based on selected country -->
+        <script>
+          const countryCityMap = {
+            "Algeria": ["Algiers", "Oran", "Constantine"],
+            "Angola": ["Luanda", "N'dalatando", "Huambo"],
+            "Benin": ["Porto-Novo", "Cotonou", "Parakou"],
+            "Botswana": ["Gaborone", "Francistown", "Molepolole"],
+            "Burkina Faso": ["Ouagadougou", "Bobo-Dioulasso", "Koudougou"],
+            "Burundi": ["Gitega", "Bujumbura", "Ngozi"],
+            "Cabo Verde": ["Praia", "Mindelo", "Santa Maria"],
+            "Cameroon": ["Yaoundé", "Douala", "Garoua"],
+            "Central African Republic": ["Bangui", "Bimbo", "Berbérati"],
+            "Chad": ["N'Djamena", "Moundou", "Sarh"],
+            "Comoros": ["Moroni", "Mutsamudu", "Fomboni"],
+            "Congo, Democratic Republic of the": ["Kinshasa", "Lubumbashi", "Mbuji-Mayi"],
+            "Congo, Republic of the": ["Brazzaville", "Pointe-Noire", "Dolisie"],
+            "Djibouti": ["Djibouti", "Ali Sabieh", "Tadjourah"],
+            "Egypt": ["Cairo", "Alexandria", "Giza"],
+            "Equatorial Guinea": ["Malabo", "Bata", "Ebebiyin"],
+            "Eritrea": ["Asmara", "Keren", "Massawa"],
+            "Eswatini": ["Mbabane", "Manzini", "Big Bend"],
+            "Ethiopia": ["Addis Ababa", "Dire Dawa", "Mekelle"],
+            "Gabon": ["Libreville", "Port-Gentil", "Franceville"],
+            "Gambia": ["Banjul", "Serekunda", "Brikama"],
+            "Ghana": ["Accra", "Kumasi", "Tamale"],
+            "Guinea": ["Conakry", "Nzérékoré", "Kankan"],
+            "Guinea-Bissau": ["Bissau", "Bafatá", "Gabú"],
+            "Ivory Coast": ["Abidjan", "Yamoussoukro", "Bouaké"],
+            "Kenya": ["Nairobi", "Mombasa", "Kisumu"],
+            "Lesotho": ["Maseru", "Teyateyaneng", "Mafeteng"],
+            "Liberia": ["Monrovia", "Gbarnga", "Kakata"],
+            "Libya": ["Tripoli", "Benghazi", "Misrata"],
+            "Madagascar": ["Antananarivo", "Toamasina", "Antsirabe"],
+            "Malawi": ["Lilongwe", "Blantyre", "Mzuzu"],
+            "Mali": ["Bamako", "Sikasso", "Mopti"],
+            "Mauritania": ["Nouakchott", "Nouadhibou", "Rosso"],
+            "Mauritius": ["Port Louis", "Beau Bassin-Rose Hill", "Vacoas-Phoenix"],
+            "Morocco": ["Rabat", "Casablanca", "Marrakesh"],
+            "Mozambique": ["Maputo", "Matola", "Beira"],
+            "Namibia": ["Windhoek", "Rundu", "Walvis Bay"],
+            "Niger": ["Niamey", "Zinder", "Maradi"],
+            "Nigeria": ["Lagos", "Abuja", "Kano"],
+            "Rwanda": ["Kigali", "Butare", "Gitarama"],
+            "Sao Tome and Principe": ["São Tomé", "Santo António", "Neves"],
+            "Senegal": ["Dakar", "Touba", "Thiès"],
+            "Seychelles": ["Victoria", "Anse Boileau", "Bel Ombre"],
+            "Sierra Leone": ["Freetown", "Bo", "Kenema"],
+            "Somalia": ["Mogadishu", "Hargeisa", "Bosaso"],
+            "South Africa": ["Pretoria", "Cape Town", "Johannesburg"],
+            "South Sudan": ["Juba", "Malakal", "Wau"],
+            "Sudan": ["Khartoum", "Omdurman", "Port Sudan"],
+            "Tanzania": ["Dodoma", "Dar es Salaam", "Mwanza"],
+            "Togo": ["Lomé", "Sokodé", "Kara"],
+            "Tunisia": ["Tunis", "Sfax", "Sousse"],
+            "Uganda": ["Kampala", "Gulu", "Lira"],
+            "Zambia": ["Lusaka", "Kitwe", "Ndola"],
+            "Zimbabwe": ["Harare", "Bulawayo", "Chitungwiza"]
+          };
 
-          <!-- Phone Number -->
-          <p class="formField">
-            <label for="phone">Phone</label>
-            <span class="inputWrapper">
-              <input type="tel" id="phone" name="phone" placeholder="Phone" autocomplete="tel" required>
-              <i class="bx bxs-contact"></i>
-            </span>
-          </p>
+          // Event listener for country selection change
+          document.getElementById('country').addEventListener('change', function() {
+            const country = this.value;
+            const citySelect = document.getElementById('city');
+            citySelect.innerHTML = '<option value="" disabled selected>Select your city</option>';
 
-          <!-- Date of Birth -->
-          <p class="formField">
-            <label for="DOB">Date of Birth</label>
-            <span class="dateWrapper">
-              <input type="date" id="DOB" name="DOB" required>
-            </span>
-          </p>
+            // Populate city options based on selected country
+            if (countryCityMap[country]) {
+              countryCityMap[country].forEach(city => {
+                const option = document.createElement('option');
+                option.value = city;
+                option.textContent = city;
+                citySelect.appendChild(option);
+              });
+            }
+          });
+        </script>
 
-          <!-- For radio buttons -->
-          <p class="formField">
-            <label class="radioLabel">Gender</label>
+        <!-- Password field -->
+        <p class="formField">
+          <label for="password">Password</label>
+          <span class="inputWrapper">
+            <input type="password" id="password" name="password" placeholder="Password" required>
+            <i class="bx bxs-lock-alt"></i>
+          </span>
+        </p>
+        <div class="password-strength">
+          <span id="strength-text">Password Strength: </span>
+          <span id="strength-bar"></span>
+        </div>
+
+        <!-- Phone Number field -->
+        <p class="formField">
+          <label for="phone">Phone</label>
+          <span class="inputWrapper">
+            <input type="tel" id="phone" name="phone" placeholder="Phone" autocomplete="tel" required>
+            <i class="bx bxs-contact"></i>
+          </span>
+        </p>
+
+        <!-- Date of Birth field -->
+        <p class="formField">
+          <label for="DOB">Date of Birth</label>
+          <span class="dateWrapper">
+            <input type="date" id="DOB" name="DOB" required>
+          </span>
+        </p>
+
+        <!-- Gender radio buttons -->
+        <p class="formField">
+          <label class="radioLabel">Gender</label>
           <div class="radioGroup">
             <label for="male">
               <input type="radio" id="male" name="gender" value="male">
@@ -240,16 +246,15 @@
               Other
             </label>
           </div>
-          </p>
+        </p>
 
-          <!-- for textarea -->
-          <p class="textareaField">
-            <label for="address">Address</label>
+        <!-- Address textarea -->
+        <p class="textareaField">
+          <label for="address">Address</label>
           <textarea id="address" name="address" placeholder="Enter your address here" required></textarea>
-          </p>
-        </fieldset>
+        </p>
 
-        <!-- For dropdown -->
+        <!-- Membership Type dropdown -->
         <label class="dropdownLabel" for="membership">Membership Type</label>
         <select class="dropdown" id="membership" name="membership">
           <option class="membership" value="regular">Regular</option>
@@ -257,12 +262,13 @@
           <option class="membership" value="visitor">Visitor</option>
         </select>
 
-        <!-- For checkbox -->
+        <!-- Newsletter subscription checkbox -->
         <p class="checkboxField">
           <label for="newsletter">Subscribe to our weekly newsletter</label>
           <input checked type="checkbox" id="newsletter" name="newsletter">
         </p>
 
+        <!-- Submit and Reset buttons -->
         <div class="buttonGroup">
           <input type="submit" value="Submit">
           <input type="reset" value="Reset">
@@ -270,6 +276,9 @@
       </form>
     </section>
   </main>
+
+  <!-- Link to external JavaScript file for form validation -->
   <script src="validation.js"></script>
 </body>
+
 </html>
