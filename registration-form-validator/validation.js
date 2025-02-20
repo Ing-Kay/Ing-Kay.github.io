@@ -44,4 +44,29 @@ document.addEventListener('DOMContentLoaded', function () {
             form.submit(); // Uncomment this line to submit the form
         }
     });
+
+    document.getElementById('password').addEventListener('input', function () {
+        const password = this.value;
+        const strengthBar = document.getElementById('strength-bar');
+        const strengthText = document.getElementById('strength-text');
+    
+        let strength = 0;
+        if (password.length >= 8) strength++;
+        if (/[A-Z]/.test(password)) strength++;
+        if (/[0-9]/.test(password)) strength++;
+        if (/[^A-Za-z0-9]/.test(password)) strength++;
+    
+        strengthBar.className = '';
+        if (strength <= 1) {
+            strengthBar.classList.add('weak');
+            strengthText.textContent = 'Password Strength: Weak';
+        } else if (strength === 2) {
+            strengthBar.classList.add('medium');
+            strengthText.textContent = 'Password Strength: Medium';
+        } else {
+            strengthBar.classList.add('strong');
+            strengthText.textContent = 'Password Strength: Strong';
+        }
+    });
+
 });

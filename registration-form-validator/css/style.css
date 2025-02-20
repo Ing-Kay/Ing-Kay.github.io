@@ -462,4 +462,28 @@ input[type="reset"]:hover {
     margin-top: 5px;
   }
 
+  .password-strength {
+    margin-top: 10px;
+}
+
+#strength-bar {
+    display: inline-block;
+    width: 100px;
+    height: 5px;
+    background-color: lightgray;
+    margin-left: 10px;
+}
+
+#strength-bar.weak {
+    background-color: red;
+}
+
+#strength-bar.medium {
+    background-color: orange;
+}
+
+#strength-bar.strong {
+    background-color: green;
+}
+
 } 
