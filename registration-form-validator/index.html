@@ -45,13 +45,153 @@
 
           <!-- Country -->
           <p class="formField">
-           <label for="country">Country</label>
-           <span class="inputWrapper">
-             <input type="text" id="country" name="country" placeholder="Country" required>
-             <i class="bx bxs-globe"></i>
-           </span>
+            <label for="country">Country</label>
+            <span class="inputWrapper">
+            <select id="country" name="country" required>
+              <option value="" disabled selected>Select your country</option>
+              <option value="Algeria">Algeria</option>
+              <option value="Angola">Angola</option>
+              <option value="Benin">Benin</option>
+              <option value="Botswana">Botswana</option>
+              <option value="Burkina Faso">Burkina Faso</option>
+              <option value="Burundi">Burundi</option>
+              <option value="Cabo Verde">Cabo Verde</option>
+              <option value="Cameroon">Cameroon</option>
+              <option value="Central African Republic">Central African Republic</option>
+              <option value="Chad">Chad</option>
+              <option value="Comoros">Comoros</option>
+              <option value="Congo, Democratic Republic of the">Congo, Democratic Republic of the</option>
+              <option value="Congo, Republic of the">Congo, Republic of the</option>
+              <option value="Djibouti">Djibouti</option>
+              <option value="Egypt">Egypt</option>
+              <option value="Equatorial Guinea">Equatorial Guinea</option>
+              <option value="Eritrea">Eritrea</option>
+              <option value="Eswatini">Eswatini</option>
+              <option value="Ethiopia">Ethiopia</option>
+              <option value="Gabon">Gabon</option>
+              <option value="Gambia">Gambia</option>
+              <option value="Ghana">Ghana</option>
+              <option value="Guinea">Guinea</option>
+              <option value="Guinea-Bissau">Guinea-Bissau</option>
+              <option value="Ivory Coast">Ivory Coast</option>
+              <option value="Kenya">Kenya</option>
+              <option value="Lesotho">Lesotho</option>
+              <option value="Liberia">Liberia</option>
+              <option value="Libya">Libya</option>
+              <option value="Madagascar">Madagascar</option>
+              <option value="Malawi">Malawi</option>
+              <option value="Mali">Mali</option>
+              <option value="Mauritania">Mauritania</option>
+              <option value="Mauritius">Mauritius</option>
+              <option value="Morocco">Morocco</option>
+              <option value="Mozambique">Mozambique</option>
+              <option value="Namibia">Namibia</option>
+              <option value="Niger">Niger</option>
+              <option value="Nigeria">Nigeria</option>
+              <option value="Rwanda">Rwanda</option>
+              <option value="Sao Tome and Principe">Sao Tome and Principe</option>
+              <option value="Senegal">Senegal</option>
+              <option value="Seychelles">Seychelles</option>
+              <option value="Sierra Leone">Sierra Leone</option>
+              <option value="Somalia">Somalia</option>
+              <option value="South Africa">South Africa</option>
+              <option value="South Sudan">South Sudan</option>
+              <option value="Sudan">Sudan</option>
+              <option value="Tanzania">Tanzania</option>
+              <option value="Togo">Togo</option>
+              <option value="Tunisia">Tunisia</option>
+              <option value="Uganda">Uganda</option>
+              <option value="Zambia">Zambia</option>
+              <option value="Zimbabwe">Zimbabwe</option>
+            </select>
+            <i class="bx bxs-globe"></i>
+            </span>
           </p>
+    
+          <!-- City -->
+            <p class="formField"></p>
+            <label for="city">City</label>
+            <span class="inputWrapper">
+              <select id="city" name="city" required>
+              <option value="" disabled selected>Select your city</option>
+              </select>
+              <i class="bx bxs-city"></i>
+            </span>
+            </p>
+            <script>
+            const countryCityMap = {
+              "Algeria": ["Algiers", "Oran", "Constantine"],
+              "Angola": ["Luanda", "N'dalatando", "Huambo"],
+              "Benin": ["Porto-Novo", "Cotonou", "Parakou"],
+              "Botswana": ["Gaborone", "Francistown", "Molepolole"],
+              "Burkina Faso": ["Ouagadougou", "Bobo-Dioulasso", "Koudougou"],
+              "Burundi": ["Gitega", "Bujumbura", "Ngozi"],
+              "Cabo Verde": ["Praia", "Mindelo", "Santa Maria"],
+              "Cameroon": ["Yaoundé", "Douala", "Garoua"],
+              "Central African Republic": ["Bangui", "Bimbo", "Berbérati"],
+              "Chad": ["N'Djamena", "Moundou", "Sarh"],
+              "Comoros": ["Moroni", "Mutsamudu", "Fomboni"],
+              "Congo, Democratic Republic of the": ["Kinshasa", "Lubumbashi", "Mbuji-Mayi"],
+              "Congo, Republic of the": ["Brazzaville", "Pointe-Noire", "Dolisie"],
+              "Djibouti": ["Djibouti", "Ali Sabieh", "Tadjourah"],
+              "Egypt": ["Cairo", "Alexandria", "Giza"],
+              "Equatorial Guinea": ["Malabo", "Bata", "Ebebiyin"],
+              "Eritrea": ["Asmara", "Keren", "Massawa"],
+              "Eswatini": ["Mbabane", "Manzini", "Big Bend"],
+              "Ethiopia": ["Addis Ababa", "Dire Dawa", "Mekelle"],
+              "Gabon": ["Libreville", "Port-Gentil", "Franceville"],
+              "Gambia": ["Banjul", "Serekunda", "Brikama"],
+              "Ghana": ["Accra", "Kumasi", "Tamale"],
+              "Guinea": ["Conakry", "Nzérékoré", "Kankan"],
+              "Guinea-Bissau": ["Bissau", "Bafatá", "Gabú"],
+              "Ivory Coast": ["Abidjan", "Yamoussoukro", "Bouaké"],
+              "Kenya": ["Nairobi", "Mombasa", "Kisumu"],
+              "Lesotho": ["Maseru", "Teyateyaneng", "Mafeteng"],
+              "Liberia": ["Monrovia", "Gbarnga", "Kakata"],
+              "Libya": ["Tripoli", "Benghazi", "Misrata"],
+              "Madagascar": ["Antananarivo", "Toamasina", "Antsirabe"],
+              "Malawi": ["Lilongwe", "Blantyre", "Mzuzu"],
+              "Mali": ["Bamako", "Sikasso", "Mopti"],
+              "Mauritania": ["Nouakchott", "Nouadhibou", "Rosso"],
+              "Mauritius": ["Port Louis", "Beau Bassin-Rose Hill", "Vacoas-Phoenix"],
+              "Morocco": ["Rabat", "Casablanca", "Marrakesh"],
+              "Mozambique": ["Maputo", "Matola", "Beira"],
+              "Namibia": ["Windhoek", "Rundu", "Walvis Bay"],
+              "Niger": ["Niamey", "Zinder", "Maradi"],
+              "Nigeria": ["Lagos", "Abuja", "Kano"],
+              "Rwanda": ["Kigali", "Butare", "Gitarama"],
+              "Sao Tome and Principe": ["São Tomé", "Santo António", "Neves"],
+              "Senegal": ["Dakar", "Touba", "Thiès"],
+              "Seychelles": ["Victoria", "Anse Boileau", "Bel Ombre"],
+              "Sierra Leone": ["Freetown", "Bo", "Kenema"],
+              "Somalia": ["Mogadishu", "Hargeisa", "Bosaso"],
+              "South Africa": ["Pretoria", "Cape Town", "Johannesburg"],
+              "South Sudan": ["Juba", "Malakal", "Wau"],
+              "Sudan": ["Khartoum", "Omdurman", "Port Sudan"],
+              "Tanzania": ["Dodoma", "Dar es Salaam", "Mwanza"],
+              "Togo": ["Lomé", "Sokodé", "Kara"],
+              "Tunisia": ["Tunis", "Sfax", "Sousse"],
+              "Uganda": ["Kampala", "Gulu", "Lira"],
+              "Zambia": ["Lusaka", "Kitwe", "Ndola"],
+              "Zimbabwe": ["Harare", "Bulawayo", "Chitungwiza"]
+            };
 
+            document.getElementById('country').addEventListener('change', function() {
+              const country = this.value;
+              const citySelect = document.getElementById('city');
+              citySelect.innerHTML = '<option value="" disabled selected>Select your city</option>';
+
+              if (countryCityMap[country]) {
+              countryCityMap[country].forEach(city => {
+                const option = document.createElement('option');
+                option.value = city;
+                option.textContent = city;
+                citySelect.appendChild(option);
+              });
+              }
+            });
+            </script>
+         
           <!--  Password  -->
           <p class="formField">
             <label for="password">Password</label>
