@@ -47,7 +47,7 @@
           <p class="formField">
             <label for="country">Country</label>
             <span class="inputWrapper">
-            <select id="country" name="country" required>
+            <select id="country" name="country" required style="background-color: #333; color: #fff;"></select>
               <option value="" disabled selected>Select your country</option>
               <option value="Algeria">Algeria</option>
               <option value="Angola">Angola</option>
@@ -112,8 +112,8 @@
             <p class="formField"></p>
             <label for="city">City</label>
             <span class="inputWrapper">
-              <select id="city" name="city" required>
-              <option value="" disabled selected>Select your city</option>
+              <select id="city" name="city" required style="background-color: #333; color: #fff;">
+                <option value="" disabled selected>Select your city</option>
               </select>
               <i class="bx bxs-city"></i>
             </span>
@@ -182,12 +182,12 @@
               citySelect.innerHTML = '<option value="" disabled selected>Select your city</option>';
 
               if (countryCityMap[country]) {
-              countryCityMap[country].forEach(city => {
-                const option = document.createElement('option');
-                option.value = city;
-                option.textContent = city;
-                citySelect.appendChild(option);
-              });
+                countryCityMap[country].forEach(city => {
+                  const option = document.createElement('option');
+                  option.value = city;
+                  option.textContent = city;
+                  citySelect.appendChild(option);
+                });
               }
             });
             </script>
